@@ -1549,21 +1549,24 @@ body {
     font-weight: 900;
     font-size: 1em;
     line-height: 1.5rem;
-    background: -webkit-gradient(linear, left top, right top, from(#32bcff), to(#5be1fd));
-    background: -webkit-linear-gradient(left, #32bcff, #5be1fd);
-    background: -o-linear-gradient(left, #32bcff, #5be1fd);
-    background: linear-gradient(to right, #32bcff, #5be1fd);
-    -webkit-background-clip: text;
-    background-clip: text;
-    -webkit-text-fill-color: transparent;
-    text-fill-color: transparent;
-    color: #fff;
+    color: #32bcff;
+    background: transparent;
     cursor: pointer;
     outline: none;
     -webkit-user-select: none;
        -moz-user-select: none;
         -ms-user-select: none;
             user-select: none; }
+    @supports (text-fill-color: transparent) or (-webkit-text-fill-color: transparent) {
+      .header__callback {
+        background: -webkit-gradient(linear, left top, right top, from(#32bcff), to(#5be1fd));
+        background: -webkit-linear-gradient(left, #32bcff, #5be1fd);
+        background: -o-linear-gradient(left, #32bcff, #5be1fd);
+        background: linear-gradient(to right, #32bcff, #5be1fd);
+        -webkit-background-clip: text;
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+        text-fill-color: transparent; } }
     .header__callback:after {
       content: '';
       position: absolute;
@@ -1575,20 +1578,6 @@ body {
       background: -webkit-linear-gradient(left, #32bcff, #5be1fd);
       background: -o-linear-gradient(left, #32bcff, #5be1fd);
       background: linear-gradient(to right, #32bcff, #5be1fd); }
-    .header__callback:focus, .header__callback:hover {
-      background: -webkit-gradient(linear, left top, right top, from(#65cdff), to(#8deafe));
-      background: -webkit-linear-gradient(left, #65cdff, #8deafe);
-      background: -o-linear-gradient(left, #65cdff, #8deafe);
-      background: linear-gradient(to right, #65cdff, #8deafe);
-      -webkit-background-clip: text;
-      background-clip: text;
-      -webkit-text-fill-color: transparent;
-      text-fill-color: transparent; }
-      .header__callback:focus:after, .header__callback:hover:after {
-        background: -webkit-gradient(linear, left top, right top, from(#65cdff), to(#8deafe));
-        background: -webkit-linear-gradient(left, #65cdff, #8deafe);
-        background: -o-linear-gradient(left, #65cdff, #8deafe);
-        background: linear-gradient(to right, #65cdff, #8deafe); }
 
 .hero__container {
   padding: 4.6875vw 0 0;
