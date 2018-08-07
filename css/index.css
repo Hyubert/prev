@@ -677,15 +677,17 @@ body {
   margin: 0 0 0;
   font-size: 4.375em;
   font-weight: 300;
-  background: -webkit-gradient(linear, left top, right top, from(#32bcff), to(#5be1fd));
-  background: -webkit-linear-gradient(left, #32bcff, #5be1fd);
-  background: -o-linear-gradient(left, #32bcff, #5be1fd);
-  background: linear-gradient(to right, #32bcff, #5be1fd);
-  -webkit-background-clip: text;
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
-  text-fill-color: transparent;
-  color: #212121; }
+  color: #32bcff; }
+  @supports (text-fill-color: transparent) or (-webkit-text-fill-color: transparent) {
+    .number__value {
+      background: -webkit-gradient(linear, left top, right top, from(#32bcff), to(#5be1fd));
+      background: -webkit-linear-gradient(left, #32bcff, #5be1fd);
+      background: -o-linear-gradient(left, #32bcff, #5be1fd);
+      background: linear-gradient(to right, #32bcff, #5be1fd);
+      -webkit-background-clip: text;
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+      text-fill-color: transparent; } }
   @media screen and (max-width: 768px) {
     .number__value {
       font-size: 40px; } }
