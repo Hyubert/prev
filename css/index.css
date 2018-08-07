@@ -159,27 +159,6 @@ body {
   font-weight: 300;
   color: #fff; }
 
-.arrow {
-  position: relative; }
-  .arrow:before, .arrow:after {
-    content: '';
-    position: absolute;
-    -webkit-transform: translateY(-50%);
-        -ms-transform: translateY(-50%);
-            transform: translateY(-50%); }
-  .arrow:before {
-    width: 35px;
-    height: 2px;
-    background: -webkit-gradient(linear, left top, right top, from(#32bcff), to(#42dcfd));
-    background: -webkit-linear-gradient(left, #32bcff, #42dcfd);
-    background: -o-linear-gradient(left, #32bcff, #42dcfd);
-    background: linear-gradient(to right, #32bcff, #42dcfd); }
-  .arrow:after {
-    left: 35px;
-    border-style: solid;
-    border-width: 5px;
-    border-color: transparent transparent transparent #5be1fd; }
-
 .breadcrumbs {
   display: -webkit-box;
   display: -webkit-flex;
@@ -236,6 +215,27 @@ body {
       color: #0fd3fc; }
     .breadcrumbs__link:focus {
       color: #0fd3fc; }
+
+.arrow {
+  position: relative; }
+  .arrow:before, .arrow:after {
+    content: '';
+    position: absolute;
+    -webkit-transform: translateY(-50%);
+        -ms-transform: translateY(-50%);
+            transform: translateY(-50%); }
+  .arrow:before {
+    width: 35px;
+    height: 2px;
+    background: -webkit-gradient(linear, left top, right top, from(#32bcff), to(#42dcfd));
+    background: -webkit-linear-gradient(left, #32bcff, #42dcfd);
+    background: -o-linear-gradient(left, #32bcff, #42dcfd);
+    background: linear-gradient(to right, #32bcff, #42dcfd); }
+  .arrow:after {
+    left: 35px;
+    border-style: solid;
+    border-width: 5px;
+    border-color: transparent transparent transparent #5be1fd; }
 
 .button {
   display: inline-block;
@@ -1603,6 +1603,9 @@ body {
 .hero__container {
   padding: 10.41667vw 0 0;
   margin-bottom: 2.60417vw; }
+  @media screen and (max-width: 580px) {
+    .hero__container {
+      padding-top: 80px; } }
 
 .hero__title {
   margin: 0 0 1.30208vw;
@@ -1642,7 +1645,8 @@ body {
     display: -webkit-box;
     display: -webkit-flex;
     display: -ms-flexbox;
-    display: flex; }
+    display: flex;
+    overflow: hidden; }
     @media screen and (max-width: 992px) {
       .main__container {
         -webkit-flex-wrap: wrap;
@@ -1666,7 +1670,8 @@ body {
     -webkit-box-flex: 0;
     -webkit-flex: 0 1 100%;
         -ms-flex: 0 1 100%;
-            flex: 0 1 100%; }
+            flex: 0 1 100%;
+    max-width: 850px; }
     @media screen and (max-width: 992px) {
       .main .content {
         max-width: 100%; } }
