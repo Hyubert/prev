@@ -1,6 +1,6 @@
 
-[home](https://hyubert.github.io/lehdzhi/index.html)  
-[page](https://hyubert.github.io/lehdzhi/page.html)
+[home](https://alexrusyn.github.io/lehdzhi/index.html)  
+[page](https://alexrusyn.github.io/lehdzhi/page.html)
 
 ---
 
